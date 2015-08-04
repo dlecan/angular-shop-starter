@@ -1,4 +1,5 @@
 /*jslint node: true */
+/*global createFolderGlobs:true */
 'use strict';
 
 var pkg = require('./package.json');
@@ -53,17 +54,6 @@ module.exports = function (grunt) {
           ]
         },
         src: 'index.html'
-      },
-      update: {
-        options: {
-          remove: ['script[data-remove!="false"]','link[data-remove!="false"]'],
-          append: [
-            {selector:'body',html:'<script src="app.full.min.js"></script>'},
-            {selector:'head',html:'<link rel="stylesheet" href="app.full.min.css">'}
-          ]
-        },
-        src:'index.html',
-        dest: 'dist/index.html'
       }
     },
     karma: {
