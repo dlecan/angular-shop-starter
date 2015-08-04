@@ -1,0 +1,14 @@
+<!--
+	Usage de la syntaxe 'controller as' dans la déclaration de la route dans home.js
+	L'instance de contrôleur s'appelle ici 'homeCtrl'
+ -->
+Hello {{homeCtrl.user.prenom}} {{homeCtrl.user.nom}}!
+
+
+<!--
+    TODO : améliorer ce code par l'usage d'une directive
+-->
+<div ng-switch on="homeCtrl.isConnected()">
+    <a ng-switch-when="true" href="#/logout">Se déconnecter</a>
+    <a ng-switch-default href="#/connection">Se connecter</a>
+</div>

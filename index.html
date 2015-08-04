@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html ng-app="angularShop">
+<html ng-app="angularShop" ng-controller="angularShopCtrl as angularShopCtrl">
 <head>
-  <title></title>
+  <title ng-bind="angularShopCtrl.title"></title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="utf-8">
   <link href="app.css" type="text/css" rel="stylesheet/css">
@@ -21,12 +21,18 @@
 
 
   <!-- Main App JS -->
+  <script src="shared/shared.js"></script>
+  <script src="shared/service/user.service.js"></script>
+  <script src="shared/interceptor/authentication-interceptor.factory.js"></script>
+  <script src="home/home.js"></script>
+  <script src="home/home.service.js"></script>
   <script src="app.js"></script>
   <!-- Add New Component JS Above -->
 
   <div>
     <div id="content" class="container">
       <div class="row">
+      <h1>Angular Shop</h1>
         <div ng-view>
         </div>
       </div>
